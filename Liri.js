@@ -44,6 +44,7 @@ for (const track of data.tracks) {
 
 
 function movieThis(){
+    var queryUrl = "http://www.omdbapi.com/?t=" + movieThis + "&y=&plot=short&apikey=trilogy"
     axios.get(queryUrl).then(function(response){
         movieThis = response.data;
         console.log("Title of movie: " + movieThis.Tile);
